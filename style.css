@@ -1,4 +1,3 @@
-/* Basic resets */
 * {
     margin: 0;
     padding: 0;
@@ -6,52 +5,68 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Darker background for better contrast */
+    color: #e0e0e0; /* Lighter text color */
     line-height: 1.6;
     padding: 20px;
 }
 
 /* Header styles */
 header {
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Space between image and nav */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Reduced padding for a more compact header */
+    background-color: #1e1e1e; /* Dark background for the header */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
-    font-size: 2.5em;
-    color: #fff; /* White */
+    font-size: 2em; /* Adjusted size for balance */
+    color: #03afff; /* Green color for the title */
+    margin: 0; /* Remove margin for better alignment */
+}
+
+.profile-image {
+    max-width: 80px; /* Smaller image size */
+    border-radius: 40px; /* Circular image */
+    transform:  rotate(360);
+}
+
+nav {
+    margin-left: auto; /* Align nav to the right */
 }
 
 nav ul {
     list-style: none;
-    margin: 10px 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 20px; /* Space between nav items */
 }
 
 nav ul li a {
-    color: #fff; /* White links */
+    color: #bdbdbd; /* Lighter grey for links */
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
 }
 
 /* Section styles */
 section {
     margin: 40px 0;
+    padding: 20px;
+    background-color: #1e1e1e; /* Consistent dark background for sections */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
-    color: #fff;
-    border-bottom: 2px solid #fff;
+    color: #03afff; /* Green for section titles */
+    border-bottom: 2px solid #03afff;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
-/* Project and skill sections */
 .project, ul {
     margin-bottom: 20px;
 }
@@ -66,38 +81,39 @@ ul li {
 
 /* Contact links */
 a {
-    color: #fff;
+    color: #03afff; /* Green links */
     text-decoration: underline;
+    transition: color 0.3s ease; /* Smooth transition for links */
+}
+
+a:hover {
+    color: #bdbdbd; /* Change color on hover */
 }
 
 footer {
     text-align: center;
     margin-top: 40px;
-    color: #fff;
+    color: #bdbdbd;
 }
 
 footer p {
     font-size: 0.9em;
 }
 
-
-fieldset#Pr1, fieldset#Pr2 {
-    border: 1px solid #fff;
-    padding: 10px;
+/* Project fieldsets */
+fieldset {
+    border: 1px solid #03afff; /* Green border for projects */
+    padding: 15px;
     margin-bottom: 10px;
-}
-
-navbar ul li a:hover {
- bavackground-color: #fff;
- color: #000000;
-}
-
-nav ul li a:hover {
-    /* background-color: #fff; White background on hover */
-    color: #082; /* Black text on hover */
-}
-
-
-
-
+    background-color: #2a2a2a; /* Darker background for fieldsets */
+    border-radius: 8px;
     
+}
+
+/* Navbar hover effects */
+nav ul li a:hover {
+    color: #03afff; /* Green on hover */
+    transform: scale(1.05); /* Slightly enlarge the link */
+}
+
+/* Back to Top Link */
